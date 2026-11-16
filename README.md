@@ -127,6 +127,19 @@ Custom events are sent through `lib/analytics.ts`:
 
 No build command override is required. Vercel uses `npm run build`.
 
+## Deploy to Cloudflare
+
+This project deploys to Cloudflare Workers through vinext. Local Next.js commands still work.
+
+In the Cloudflare build settings:
+
+- Build command: `npm run build:vinext`
+- Deploy command: `npm run deploy:vinext`
+
+Set `NEXT_PUBLIC_SITE_URL` and `NEXT_PUBLIC_SKILLSPRINT_URL` as build variables. Next.js reads them while the site is compiled.
+
+The Cloudflare CLI needs Node.js `22.23` or newer. The Worker name is `codigoyo-web` in `cloudflare.config.ts`.
+
 ## Stack
 
 Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4. No database, authentication, CMS, or payment code.
