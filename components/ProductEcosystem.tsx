@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ArrowRight } from "@/components/icons";
 import { content } from "@/lib/content";
-import { siteConfig, skillSprintHref } from "@/lib/config";
+import { siteConfig } from "@/lib/config";
 
 export function ProductEcosystem() {
   const copy = content.products;
@@ -29,7 +29,7 @@ export function ProductEcosystem() {
             points={copy.learn.points}
             note={copy.learn.note}
             cta={copy.learn.cta}
-            href={skillSprintHref()}
+            href="https://skillsprintlms.netlify.app/en"
             track="product_skillsprint"
             visual={<LearnVisual />}
           />
